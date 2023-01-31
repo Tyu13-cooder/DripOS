@@ -115,6 +115,8 @@ update_qloader2:
 %.o: %.S
 	${CC} -Werror -Wall -Wextra -Wpedantic -O${O_LEVEL} -g -MD -c $< -o $@
 
+
+
 %.o: %.asm
 	nasm -f elf64 -F dwarf -g -o $@ $<
 
